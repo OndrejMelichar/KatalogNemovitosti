@@ -18,16 +18,11 @@ import javafx.stage.Window;
  */
 public class PridatDialog extends Stage {
     
-    private String typ;
-    private double plocha;
-    private int mistnosti;
-    private double cena;
-    
     public void zobrazDialog(Window hlavniOkno) {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/PridatNemovitostDialog.fxml"));
             Parent root = (Parent) fxmlLoader.load();
-            Stage okno = new Stage();
+            Stage okno = new Stage();// toto už se neprovede
             okno.initModality(Modality.WINDOW_MODAL); /*nevím přesně k čemu to je -> mohu to odstranit?*/
             okno.initOwner(hlavniOkno); /*nevím přesně k čemu to je -> mohu to odstranit?*/
             okno.setTitle("Přidat nemovitost");
@@ -36,10 +31,6 @@ public class PridatDialog extends Stage {
             okno.show();
         } catch (Exception e) {
         }
-    }
-    
-    public String getTyp() {
-        return typ;
     }
     
 }

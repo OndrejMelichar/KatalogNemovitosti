@@ -21,9 +21,9 @@
             </FXCollections>
           </items>
         </ComboBox>
-        <TextField fx:id="plochaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte plochu" />
-        <TextField fx:id="mistnostiTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte místnosti" />
-        <TextField fx:id="cenaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte cenu" />
+        <TextField fx:id="plochaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Zadejte plochu" text="" />
+        <TextField fx:id="mistnostiTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Zadejte místnosti" text="" />
+        <TextField fx:id="cenaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Zadejte cenu" text="" />
         <Button minWidth="140.0" mnemonicParsing="false" onAction="#handlePridatFinalAction" text="Přidat nemovitost">
           <VBox.margin>
             <Insets top="10.0" />
