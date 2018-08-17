@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="240.0" maxWidth="270.0" minHeight="240.0" minWidth="270.0" prefHeight="240.0" prefWidth="270.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.mavenjavafxpokus1.katalognemovitosti.FXMLController">
+  <children>
+    <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <ComboBox fx:id="typComboBox" prefWidth="200.0" promptText="Vyberte typ">
+          <items>
+            <FXCollections fx:factory="observableArrayList">
+              <String fx:value="Item 1" />
+              <String fx:value="Item 2" />
+              <String fx:value="Item 3" />
+            </FXCollections>
+          </items>
+        </ComboBox>
+        <TextField fx:id="plochaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte plochu" />
+        <TextField fx:id="mistnostiTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte místnosti" />
+        <TextField fx:id="cenaTextField" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Zadejte cenu" />
+        <Button minWidth="140.0" mnemonicParsing="false" onAction="#handlePridatFinalAction" text="Přidat nemovitost">
+          <VBox.margin>
+            <Insets top="10.0" />
+          </VBox.margin>
+        </Button>
+      </children>
+      <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>
