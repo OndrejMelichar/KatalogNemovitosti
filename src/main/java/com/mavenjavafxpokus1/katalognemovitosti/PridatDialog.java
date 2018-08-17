@@ -38,4 +38,8 @@ public class PridatDialog extends Stage {
         }
     }
     
+    public String getTyp() {
+        return typ;
+    }
+    
 }
