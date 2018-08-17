@@ -79,5 +79,7 @@ public class FXMLController implements Initializable {
         mistnostiTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Integer>("Mistnosti"));
         cenaTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Double>("Cena"));
         tableView.setItems(spravceNemovitosti.getNemovitosti());
-    }    
+    }
+    
+    /*zkouška jenom kvůli githubu*/
 }
