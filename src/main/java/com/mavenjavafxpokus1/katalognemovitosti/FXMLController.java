@@ -74,12 +74,11 @@ public class FXMLController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        typTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, String>("Typ")); /*v závorce (na konci) by měl být v uvozovkách název getteru daného atributu (bez klíčového slova get a proto s velkým písmenem na začátku)*/
+        typTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, String>("Typ")); //v závorce (na konci) by měl být v uvozovkách název getteru daného atributu (bez klíčového slova get a proto s velkým písmenem na začátku)
         plochaTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Double>("Plocha"));
         mistnostiTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Integer>("Mistnosti"));
         cenaTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Double>("Cena"));
         tableView.setItems(spravceNemovitosti.getNemovitosti());
     }
     
-    /*zkouška jenom kvůli githubu*/
 }

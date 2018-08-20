@@ -30,8 +30,7 @@ public class PridatDialog extends Stage {
             okno.setScene(new Scene(root));
             okno.show();
         } catch (Exception e) {
-            System.out.println("- - - - - CHYBA: " + e.getClass().getName());
-            /*zde bylo něco změněno (vedlejší větev)*/
+            System.out.println("- - - - - CHYBA: " + e.getClass().getName() + ": " + e.getMessage());
         }
     }
     
