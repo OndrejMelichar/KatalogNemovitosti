@@ -57,7 +57,7 @@ public class FXMLController implements Initializable {
     @FXML
     private void handlePridatFinalAction(ActionEvent event) {
         Stage pridatDialog = (Stage)typComboBox.getScene().getWindow();
-        pridatDialog.hide();
+        pridatDialog.hide(); //.close()
         
         try { /*není to prasárna?*/
             String typ = (String)typComboBox.getSelectionModel().getSelectedItem();

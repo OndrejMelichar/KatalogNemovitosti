@@ -20,7 +20,7 @@ public class PridatDialog extends Stage {
     
     public void zobrazDialog(Window hlavniOkno) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/PridatNemovitostDialog.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/PridatNemovitostDialog.fxml")); // bez initialize funguje: /fxml/PridatNemovitostDialog.fxml
             Parent root = (Parent) fxmlLoader.load();
             Stage okno = new Stage();// toto už se neprovede
             okno.initModality(Modality.WINDOW_MODAL); /*nevím přesně k čemu to je -> mohu to odstranit?*/
@@ -30,6 +30,7 @@ public class PridatDialog extends Stage {
             okno.setScene(new Scene(root));
             okno.show();
         } catch (Exception e) {
+            System.out.println("- - - - - CHYBA: " + e.getClass().getName());
         }
     }
     
