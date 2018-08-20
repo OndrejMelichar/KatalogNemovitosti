@@ -67,17 +67,27 @@ public class FXMLController implements Initializable {
 
             Nemovitost novaNemovitost = new Nemovitost(typ, plocha, mistnosti, cena);
             spravceNemovitosti.pridejNemovitost(novaNemovitost);
+            //event.notifyAll();
         } catch (Exception e) {
             System.out.println("- - - - - Vyskytla se chyba!");
+            e.printStackTrace();
         }
     }
     
     @Override
-    public void initialize(URL url, ResourceBundle rb) {
+    public void initialize(URL url, ResourceBundle rb) { // pro každý FXML dokument používat jeho vlastní Controller (každé okno má svůj Controller)
+        System.out.println("URL: " + url);
+        System.out.println("RB: " + rb);
+        System.out.println("XXXXXXXXXXXXXX" + this.typTableColumn + "- " + this.plochaTableColumn);
+//        this.typTableColumn = new TableColumn<>();
         typTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, String>("Typ")); //v závorce (na konci) by měl být v uvozovkách název getteru daného atributu (bez klíčového slova get a proto s velkým písmenem na začátku)
+//        this.plochaTableColumn = new TableColumn<>();
         plochaTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Double>("Plocha"));
+//        this.mistnostiTableColumn = new TableColumn<>();
         mistnostiTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Integer>("Mistnosti"));
+//        this.cenaTableColumn = new TableColumn<>();
         cenaTableColumn.setCellValueFactory(new PropertyValueFactory<Nemovitost, Double>("Cena"));
+//        this.tableView = new TableView<>();
         tableView.setItems(spravceNemovitosti.getNemovitosti());
     }
     
